@@ -16,7 +16,7 @@ const MyProvider = (props) => {
    //using useEffect call API
    useEffect(() => {
       setLoading(true);
-      callApi(`https://hoanguyenit.com/api/categories`).then(res=>{
+      callApi(`http://127.0.0.1:8000/api/categories`).then(res=>{
           console.log(res)
           setCategories(res.multiple);
           dispatch({type:INSTALL_CATEGORY,payload:res.multiple});
