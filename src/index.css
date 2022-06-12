@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@tailwind base;
+@tailwind components;
+@import "./custom-button.css";
+@tailwind utilities;
+
+body{
+  overflow-x: hidden !important;
+}
+
+/* menu */
+@media screen and (min-width:1000px) {
+  .menu-parent li:hover .menu-child{
+    opacity: theme('opacity.100');
+    visibility: inherit;
+  }
+
+  .menu-child li:hover .menu-child-child{
+    opacity: theme('opacity.100');
+    visibility: inherit;
+  }
+  .menu-parent>li:hover>a{color:theme('colors.black')}
+  /* .group:hover a{color:theme('colors.white')} */
+  .group2:hover a{color:#bf1650;}
+  
+}
+
+
+@media screen and (min-width:370px) {
+    
+  /* .menu-child-child li:last-child{
+    padding-bottom: theme('padding.0');
+  } */
+  .showmenu{
+    right:0 !important;
+  }
+}
+
+.content p{
+  line-height:30px;
+  text-align: justify;
+  font-size: 15px;
+  color:#FFFFFF;
+}
+.content iframe{
+  padding:20px 0;
+  margin:0 auto;
+  display: block;
+
+}
+.content img {
+  max-width: 100% !important;
+  height: auto !important;
+}
