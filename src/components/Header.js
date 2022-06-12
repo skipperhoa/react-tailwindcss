@@ -1,10 +1,13 @@
 import React,{useContext, useEffect, useState} from 'react'
+
 import logo from '../assets/logo.jpg'
 import { Link } from "react-router-dom";
 import {MContext} from './UseContext';
 export default function Headers(){
   const [menu,setMenu] = useState(false);
-  const {categories}  = useContext(MContext);
+  const {state, dispatch}  = useContext(MContext);
+  console.log("header state",state.categories)
+  const [categories, setCategories] = useState(state.categories)
   const isMenu = ()=>{
       let chon = false;
       if(menu) chon = false
